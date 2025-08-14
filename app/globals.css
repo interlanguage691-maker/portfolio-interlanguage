@@ -1,0 +1,335 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 142 25% 50%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 142 25% 50%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 142 25% 50%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 142 25% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Hiệu ứng ngôi sao cho welcome section */
+.stars-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.stars-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.stars-animation::before,
+.stars-animation::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffee64' width='24' height='24'%3E%3Cpath d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z'/%3E%3C/svg%3E")
+    no-repeat center / contain;
+  animation-name: float-stars;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  opacity: 0;
+}
+
+.stars-animation::before {
+  top: 20%;
+  left: 30%;
+  animation-duration: 3s;
+  animation-delay: 0.5s;
+}
+
+.stars-animation::after {
+  top: 60%;
+  left: 70%;
+  animation-duration: 4s;
+  animation-delay: 1s;
+}
+
+@keyframes float-stars {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50px, -50px) rotate(360deg) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Hiệu ứng hình khối cho welcome section */
+.shapes-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.shape {
+  position: absolute;
+  opacity: 0;
+  animation: float-shape 6s ease-in-out infinite;
+  border-radius: 10px;
+}
+
+.shape-circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.shape-square {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.shape-triangle {
+  width: 0;
+  height: 0;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-bottom: 35px solid;
+  border-radius: 5px;
+}
+
+.shape-1 {
+  top: 15%;
+  left: 10%;
+  animation-delay: 0.2s;
+}
+
+.shape-2 {
+  top: 25%;
+  right: 15%;
+  animation-delay: 1.5s;
+}
+
+.shape-3 {
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 3s;
+}
+
+.shape-4 {
+  bottom: 30%;
+  right: 10%;
+  animation-delay: 4.5s;
+}
+
+.shape-yellow {
+  background-color: #ffee64;
+  border-bottom-color: #ffee64;
+}
+
+.shape-pink {
+  background-color: #fca7b3;
+  border-bottom-color: #fca7b3;
+}
+
+.shape-blue {
+  background-color: #9ddaec;
+  border-bottom-color: #9ddaec;
+}
+
+@keyframes float-shape {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(50px, -200px) rotate(360deg) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Animations for scroll effects */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease forwards;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.8s ease forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease forwards;
+  }
+
+  .animate-zoom-in {
+    animation: zoomIn 0.8s ease forwards;
+  }
+
+  .animate-fade-in-delay {
+    animation: fadeIn 0.8s ease 0.3s forwards;
+    opacity: 0;
+  }
+
+  .hover-scale {
+    transition: transform 0.3s ease;
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  .hover-bright {
+    transition: filter 0.3s ease;
+  }
+
+  .hover-bright:hover {
+    filter: brightness(1.1);
+  }
+}
+
+/* Hiệu ứng di chuyển nhẹ nhàng cho hình ảnh */
+.animate-float-image {
+  animation: float-image 8s ease-in-out infinite;
+}
+
+@keyframes float-image {
+  0%,
+  100% {
+    transform: translateY(0) scale(1.01);
+  }
+  50% {
+    transform: translateY(-10px) scale(1);
+  }
+}
