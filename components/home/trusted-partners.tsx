@@ -8,7 +8,7 @@ export default function TrustedPartners() {
     <section className="py-16 sm:py-24">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Đối tác tin cậy</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Đối tác của chúng tôi</h2>
           <p className="mt-4 text-lg text-gray-600">
             InterLanguage tự hào hợp tác với các đơn vị uy tín trong và ngoài nước
           </p>
