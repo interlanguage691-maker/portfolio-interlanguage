@@ -42,7 +42,7 @@ export default function WelcomeSection() {
             >
               <div className="relative w-full h-full animate-float-image">
                 <Image
-                  src="https://i.imgur.com/xooNcWN.png"
+                  src="/image/anhngoisao.png"
                   alt="welcome"
                   width={800}
                   height={800}

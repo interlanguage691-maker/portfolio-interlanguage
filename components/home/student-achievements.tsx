@@ -15,7 +15,7 @@ const featuredStudents = [
     score: "IELTS 8.0",
     university: "9.0 IELTS Speaking",
     feedback:
-      "Lớp học của thầy Huy Anh đã giúp anh rất nhiều vì có rất ít trung tâm có thể giúp anh luyện Speaking IELTS hiệu quả như vậy. Kỹ năng Speaking được thầy củng cố bằng cách tạo mọi điều kiện và môi trường để có thể tương tác trực tiếp với thầy.",
+      "Với sự hướng dẫn của thầy Huy Anh, anh đã cải thiện kỹ năng Speaking IELTS một cách hiệu quả. Lớp học của thầy tạo môi trường tương tác trực tiếp, giúp anh tự tin hơn khi giao tiếp.",
   },
   {
     name: "Nguyễn Mai Phương",
@@ -23,7 +23,7 @@ const featuredStudents = [
     score: "IELTS 8.0",
     university: "8.0 IELTS Speaking",
     feedback:
-      "Thầy Huy Anh là một người thầy có kiến thức sâu rộng, truyền cảm hứng, và luôn tạo cảm giác thoải mái khi học. Thầy không chỉ là người đồng hành giúp chị luyện tập chăm chỉ, mà còn hướng dẫn cách diễn đạt hay, bổ sung nhiều từ vựng mới, tuy khó nhưng cực kỳ hiệu quả. Nhờ đó, chị bứt phá đạt 8.0 sau 2 tháng ôn luyện.",
+      "Thầy Huy Anh có kiến thức sâu rộng, truyền cảm hứng và giúp người học thoải mái. Thầy đã hướng dẫn cách diễn đạt và bổ sung từ vựng hiệu quả, giúp bạn đạt 8.0 chỉ sau 2 tháng.",
   },
   {
     name: "Trần Văn Hùng",
@@ -31,7 +31,7 @@ const featuredStudents = [
     score: "IELTS 8.0",
     university: "Đại học Harvard",
     feedback:
-      "Sau 6 tháng học tại InterLanguage, đi��m IELTS của tôi đã tăng từ 6.0 lên 8.0. Phương pháp giảng dạy tại đây rất hiệu quả và phù hợp với từng học viên.",
+      "Sau 6 tháng học tại InterLanguage, điểm IELTS của tôi đã tăng từ 6.0 lên 8.0. Phương pháp giảng dạy tại đây rất hiệu quả và phù hợp với từng học viên.",
   },
   {
     name: "Lê Thị Hương",

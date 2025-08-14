@@ -48,7 +48,7 @@ export default function ContactPage() {
 
   return (
     <div className="flex flex-col">
-      <SectionHeader backgroundImage="https://i.imgur.com/QYvuJGH.png" />
+      <SectionHeader backgroundImage="/image/anhnencontact.png" />
 
       {/* Contact Information */}
       <section className="py-12">
@@ -112,13 +112,17 @@ export default function ContactPage() {
             <div className="overflow-hidden rounded-xl shadow-lg flex flex-col lg:flex-row">
               {/* Map */}
               <div className="relative lg:w-1/2">
-                <Image
-                  src="/placeholder.svg?height=600&width=800"
-                  alt="InterLanguage Contact Image"
-                  width={800}
-                  height={1000}
-                  className="object-cover w-full h-full hover-bright"
-                />
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0964843002987!2d105.7811593!3d21.0285114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab3b4220c2bd%3A0x1c9e359e2a4f618c!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgVGjDtG5nIHRpbiB2aWV0!5e0!3m2!1svi!2s!4v1234567890"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-full"
+                  title="InterLanguage - 691 Hoàng Hoa Thám, Ba Đình, Hà Nội"
+                ></iframe>
               </div>
 
               {/* Registration Form */}

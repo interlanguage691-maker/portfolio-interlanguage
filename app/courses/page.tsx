@@ -128,7 +128,7 @@ export default function CoursesPage() {
 
   return (
     <div className="flex flex-col">
-      <SectionHeader backgroundImage="https://i.imgur.com/4H1u8Ag.png" />
+      <SectionHeader backgroundImage="/image/bannerkhoahoc.png" />
 
       {/* Course Categories */}
       <section className="py-8 sm:py-12 md:py-16">

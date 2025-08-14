@@ -27,7 +27,7 @@ export const teamMembers = [
                 shape: "square",
             },
         ],
-        image: "https://i.imgur.com/rAm7u9J.png",
+        image: "/image/chuhuyanh.png",
     },
     {
         name: "Cô Dương Lan Hương",
@@ -42,7 +42,7 @@ export const teamMembers = [
             { text: "Đạt danh hiệu Giáo viên dạy giỏi cấp Thành phố", color: "#fca7b3", shape: "triangle" },
             { text: "Chứng chỉ C1, IELTS theo tiêu chuẩn của Sở Giáo dục và Đào tạo", color: "#fc8a3d", shape: "circle" },
         ],
-        image: "https://i.imgur.com/1gSNOy4.png",
+        image: "/image/duonglanhuong.png",
     },
     {
         name: "Cô Trần Thị Thu Hà",
@@ -61,7 +61,7 @@ export const teamMembers = [
                 shape: "circle",
             },
         ],
-        image: "https://i.imgur.com/p6VHz5v.png",
+        image: "/image/tranthuha.png",
     },
 ];
 

@@ -17,7 +17,7 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col">
       {/* Header Section with Background Image */}
-      <SectionHeader backgroundImage="https://i.imgur.com/bU6tTVk.png" />
+      <SectionHeader backgroundImage="/image/anhnen.png" />
 
       {/* Mission & Vision Section */}
       <section className="bg-white py-16 sm:py-24">
