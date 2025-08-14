@@ -65,7 +65,7 @@ export default function CoursesPage() {
     {
       id: "ielts",
       title: "Khóa học IELTS theo cấp độ",
-      icon: <Award className="h-8 w-8 text-[#64A162]" />,
+      icon: <GraduationCap className="h-8 w-8 text-[#64A162]" />,
       description:
         "Các khóa học IELTS được thiết kế theo từng cấp độ, giúp học viên tiến bộ từng bước và đạt được mục tiêu điểm số mong muốn.",
       courses: [
@@ -75,7 +75,7 @@ export default function CoursesPage() {
           description:
             "Khóa học xây dựng nền tảng vững chắc cho IELTS, tập trung vào các kỹ năng cơ bản và chiến lược làm bài.",
           level: "Sơ cấp",
-          duration: "24 buổi/khóa",
+          duration: "26 buổi/khóa",
           price: "7,500,000 VNĐ/khóa",
           target: "IELTS 5.5",
           image: "/placeholder.svg?height=400&width=600",
@@ -86,7 +86,7 @@ export default function CoursesPage() {
           description:
             "Khóa học IELTS trung cấp, nâng cao kỹ năng và chiến lược làm bài thi, phù hợp cho người đã có nền tảng.",
           level: "Trung cấp",
-          duration: "24 buổi/khóa",
+          duration: "28 buổi/khóa",
           price: "8,500,000 VNĐ",
           target: "IELTS 6.5",
           image: "/placeholder.svg?height=400&width=600",
@@ -97,8 +97,8 @@ export default function CoursesPage() {
           description:
             "Khóa học IELTS cao cấp, hoàn thiện kỹ năng và chiến lược làm bài thi, dành cho người muốn đạt điểm cao.",
           level: "Cao cấp",
-          duration: "24 buổi/khóa",
-          price: "9,000,000 VNĐ",
+          duration: "30 buổi/khóa",
+          price: "9,500,000 VNĐ",
           target: "IELTS 7.5",
           image: "/placeholder.svg?height=400&width=600",
         },

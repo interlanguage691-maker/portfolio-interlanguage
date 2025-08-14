@@ -67,16 +67,16 @@ export const teamMembers = [
 
 export const facilities = [
     {
-        title: "Phòng học hiện đại",
+        title: "Khu vực phòng học",
         description:
             "Các phòng học được trang bị đầy đủ thiết bị nghe nhìn, máy điều hòa và không gian thoải mái cho việc học tập.",
         images: [
             { src: "https://i.imgur.com/6yWe1RR.png", alt: "Phòng học hiện đại 1" },
-            { src: "https://i.imgur.com/57Pdnfx.png", alt: "Phòng học hiện đại 2" },
-            { src: "https://i.imgur.com/4CpbaR7.png", alt: "Phòng học hiện đại 3" },
-            { src: "https://i.imgur.com/H7eD8Tm.png", alt: "Phòng học hiện đại 4" },
-            { src: "https://i.imgur.com/cy1NiM4.png", alt: "Phòng học hiện đại 5" },
-            { src: "https://i.imgur.com/6yWe1RR.png", alt: "Phòng học hiện đại 6" },
+            // { src: "https://i.imgur.com/57Pdnfx.png", alt: "Phòng học hiện đại 2" },
+            // { src: "https://i.imgur.com/4CpbaR7.png", alt: "Phòng học hiện đại 3" },
+            // { src: "https://i.imgur.com/H7eD8Tm.png", alt: "Phòng học hiện đại 4" },
+            // { src: "https://i.imgur.com/cy1NiM4.png", alt: "Phòng học hiện đại 5" },
+            // { src: "https://i.imgur.com/6yWe1RR.png", alt: "Phòng học hiện đại 6" },
         ],
     },
     {
@@ -84,10 +84,10 @@ export const facilities = [
         description: "Không gian mở cho học viên thực hành giao tiếp tiếng Anh và tham gia các hoạt động ngoại khóa.",
         images: [
             { src: "https://i.imgur.com/Umf6T2p.png", alt: "Khu vực thực hành 1" },
-            { src: "https://i.imgur.com/4CpbaR7.png", alt: "Phòng học hiện đại 3" },
-            { src: "https://i.imgur.com/H7eD8Tm.png", alt: "Phòng học hiện đại 4" },
-            { src: "https://i.imgur.com/cy1NiM4.png", alt: "Phòng học hiện đại 5" },
-            { src: "https://i.imgur.com/6yWe1RR.png", alt: "Phòng học hiện đại 6" },
+            // { src: "https://i.imgur.com/4CpbaR7.png", alt: "Phòng học hiện đại 3" },
+            // { src: "https://i.imgur.com/H7eD8Tm.png", alt: "Phòng học hiện đại 4" },
+            // { src: "https://i.imgur.com/cy1NiM4.png", alt: "Phòng học hiện đại 5" },
+            // { src: "https://i.imgur.com/6yWe1RR.png", alt: "Phòng học hiện đại 6" },
         ],
     },
     {
@@ -95,10 +95,10 @@ export const facilities = [
         description: "Không gian lễ tân được trang bị đầy đủ thiết bị nghe nhìn, máy điều hòa và không gian thoải mái để phụ huynh có thể đợi con em mình",
         images: [
             { src: "https://i.imgur.com/Umf6T2p.png", alt: "Khu vực thực hành 1" },
-            { src: "https://i.imgur.com/4CpbaR7.png", alt: "Phòng học hiện đại 3" },
-            { src: "https://i.imgur.com/H7eD8Tm.png", alt: "Phòng học hiện đại 4" },
-            { src: "https://i.imgur.com/cy1NiM4.png", alt: "Phòng học hiện đại 5" },
-            { src: "https://i.imgur.com/6yWe1RR.png", alt: "Phòng học hiện đại 6" },
+            // { src: "https://i.imgur.com/4CpbaR7.png", alt: "Phòng học hiện đại 3" },
+            // { src: "https://i.imgur.com/H7eD8Tm.png", alt: "Phòng học hiện đại 4" },
+            // { src: "https://i.imgur.com/cy1NiM4.png", alt: "Phòng học hiện đại 5" },
+            // { src: "https://i.imgur.com/6yWe1RR.png", alt: "Phòng học hiện đại 6" },
         ],
     },
 ];

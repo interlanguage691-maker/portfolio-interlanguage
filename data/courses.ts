@@ -250,7 +250,7 @@ export const coursesData: Record<
       "Người học có trình độ tiếng Anh cao (tương đương C1), đã có kiến thức vững về IELTS và muốn đạt điểm 7.0-8.5",
     duration: "4 tháng",
     sessionsPerWeek: "2 buổi/tuần, mỗi buổi 1 giờ 45 phút",
-    price: "9,000,000 VNĐ",
+    price: "9,500,000 VNĐ",
     target: "IELTS 7.5",
     level: "Cao cấp",
     objectives: [

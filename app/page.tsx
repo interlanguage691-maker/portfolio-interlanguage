@@ -12,7 +12,7 @@ export default function Home() {
       <WelcomeSection />
       <WhyChooseUs />
       <StudentAchievements />
-      <TrustedPartners />
+      {/* <TrustedPartners /> */}
 
       {/* CTA Section */}
       <CallToAction />

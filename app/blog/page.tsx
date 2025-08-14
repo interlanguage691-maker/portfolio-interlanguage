@@ -1,5 +1,3 @@
-"use client"
-
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -29,6 +27,7 @@ function Pagination({
           onClick={() => onPageChange(currentPage - 1)}
           disabled={currentPage === 1}
           aria-label="Trang trước"
+          className="hover:bg-[#64A162] hover:text-white"
         >
           <ChevronLeft className="h-4 w-4" />
         </Button>
@@ -37,7 +36,7 @@ function Pagination({
           <Button
             key={page}
             variant={currentPage === page ? "default" : "outline"}
-            className={currentPage === page ? "bg-[#64A162] hover:bg-[#548652]" : ""}
+            className={currentPage === page ? "bg-[#64A162] hover:bg-[#548652]" : "hover:bg-[#64A162] hover:text-white"}
             onClick={() => onPageChange(page)}
           >
             {page}
@@ -50,6 +49,7 @@ function Pagination({
           onClick={() => onPageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
           aria-label="Trang sau"
+          className="hover:bg-[#64A162] hover:text-white"
         >
           <ChevronRight className="h-4 w-4" />
         </Button>
@@ -57,6 +57,8 @@ function Pagination({
     </div>
   )
 }
+
+
 
 export default function BlogPage({
   searchParams,
@@ -68,9 +70,14 @@ export default function BlogPage({
 
   return (
     <div className="flex flex-col">
-      <SectionHeader backgroundImage="https://i.imgur.com/z1tchXw.png" />
+      <SectionHeader backgroundImage="/image/blog.png" />
 
-      <Suspense fallback={<div className="container mx-auto px-4 py-12 text-center">Đang tải bài viết...</div>}>
+      <Suspense fallback={
+        <div className="container mx-auto px-4 py-12 text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#64A162] mx-auto mb-4"></div>
+          <p className="text-gray-600">Đang tải bài viết...</p>
+        </div>
+      }>
         <BlogContent page={page} postsPerPage={postsPerPage} />
       </Suspense>
     </div>
@@ -78,7 +85,7 @@ export default function BlogPage({
 }
 
 async function BlogContent({ page, postsPerPage }: { page: number; postsPerPage: number }) {
-  let blogPosts = []
+  let blogPosts: any[] = []
 
   try {
     blogPosts = await getAllPosts()
@@ -102,36 +109,37 @@ async function BlogContent({ page, postsPerPage }: { page: number; postsPerPage:
         <section className="py-12">
           <div className="container mx-auto px-4">
             <AnimationWrapper animation="fade-up">
-              <Card className="overflow-hidden border-0 shadow-lg hover-lift">
-                <div className="grid md:grid-cols-2">
-                  <div className="relative min-h-[300px]">
+              <Card className="overflow-hidden border-0 shadow-xl hover-lift transition-all duration-300">
+                <div className="grid md:grid-cols-2 gap-0">
+                  <div className="relative min-h-[300px] md:min-h-[400px]">
                     <Image
                       src={featuredPost.image || "/placeholder.svg?height=600&width=800"}
                       alt={featuredPost.title}
                       fill
-                      className="object-cover hover-bright"
+                      className="object-cover hover:scale-105 transition-transform duration-500"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                   </div>
-                  <CardContent className="flex flex-col justify-center p-8">
-                    <div className="flex items-center space-x-4 text-sm text-gray-500">
-                      <div className="flex items-center">
-                        <CalendarIcon className="mr-1 h-4 w-4" />
+                  <CardContent className="flex flex-col justify-center p-8 bg-gradient-to-br from-[#64A162]/5 to-white">
+                    <div className="flex items-center space-x-4 text-sm text-gray-500 mb-4">
+                      <div className="flex items-center bg-white px-3 py-1 rounded-full shadow-sm">
+                        <CalendarIcon className="mr-1 h-4 w-4 text-[#64A162]" />
                         <span>{featuredPost.date}</span>
                       </div>
-                      <div className="flex items-center">
-                        <User className="mr-1 h-4 w-4" />
+                      <div className="flex items-center bg-white px-3 py-1 rounded-full shadow-sm">
+                        <User className="mr-1 h-4 w-4 text-[#64A162]" />
                         <span>{featuredPost.author}</span>
                       </div>
-                      <div className="flex items-center">
-                        <Clock className="mr-1 h-4 w-4" />
+                      <div className="flex items-center bg-white px-3 py-1 rounded-full shadow-sm">
+                        <Clock className="mr-1 h-4 w-4 text-[#64A162]" />
                         <span>{featuredPost.readTime}</span>
                       </div>
                     </div>
-                    <h2 className="mt-4 text-3xl font-bold">{featuredPost.title}</h2>
-                    <p className="mt-4 text-gray-600">{featuredPost.excerpt}</p>
-                    <div className="mt-6">
-                      <Button asChild className="bg-[#64A162] hover:bg-[#548652] hover-lift">
-                        <Link href={`/blog/${featuredPost.slug}`}>Đọc tiếp</Link>
+                    <h2 className="text-3xl font-bold text-gray-900 mb-4 leading-tight">{featuredPost.title}</h2>
+                    <p className="text-gray-600 text-lg leading-relaxed mb-6">{featuredPost.excerpt}</p>
+                    <div className="mt-auto">
+                      <Button asChild className="bg-[#64A162] hover:bg-[#548652] hover-lift text-lg px-8 py-3">
+                        <Link href={`/blog/${featuredPost.slug}`}>Đọc bài viết nổi bật</Link>
                       </Button>
                     </div>
                   </CardContent>
@@ -143,35 +151,46 @@ async function BlogContent({ page, postsPerPage }: { page: number; postsPerPage:
       )}
 
       {/* Blog Posts */}
-      <section className="py-12">
+      <section className="py-12 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Tất cả bài viết</h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Khám phá những bài viết hữu ích về phương pháp học tiếng Anh, 
+              kinh nghiệm thi IELTS và những câu chuyện thành công của học viên
+            </p>
+          </div>
+
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {displayPosts.map((post, index) => (
               <AnimationWrapper key={post.slug} animation="fade-up" delay={index * 100}>
-                <Card className="overflow-hidden border-0 shadow-md hover-lift h-full">
-                  <div className="relative aspect-video w-full">
+                <Card className="overflow-hidden border-0 shadow-lg hover-lift h-full group transition-all duration-300 hover:shadow-xl">
+                  <div className="relative aspect-video w-full overflow-hidden">
                     <Image
                       src={post.image || "/placeholder.svg?height=400&width=600"}
                       alt={post.title}
                       fill
-                      className="object-cover hover-bright"
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
-                  <CardContent className="p-6 flex flex-col h-full">
-                    <div className="flex items-center justify-between text-sm text-gray-500">
+                  <CardContent className="p-6 flex flex-col h-full bg-white">
+                    <div className="flex items-center justify-between text-sm text-gray-500 mb-3">
                       <div className="flex items-center">
-                        <CalendarIcon className="mr-1 h-4 w-4" />
+                        <CalendarIcon className="mr-1 h-4 w-4 text-[#64A162]" />
                         <span>{post.date}</span>
                       </div>
                       <div className="flex items-center">
-                        <Clock className="mr-1 h-4 w-4" />
+                        <Clock className="mr-1 h-4 w-4 text-[#64A162]" />
                         <span>{post.readTime}</span>
                       </div>
                     </div>
-                    <h3 className="mt-2 text-xl font-bold">{post.title}</h3>
-                    <p className="mt-2 text-gray-600 flex-grow">{post.excerpt}</p>
-                    <div className="mt-4">
-                      <Button asChild variant="outline" className="w-full hover-lift">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#64A162] transition-colors duration-300">
+                      {post.title}
+                    </h3>
+                    <p className="text-gray-600 flex-grow leading-relaxed">{post.excerpt}</p>
+                    <div className="mt-6">
+                      <Button asChild variant="outline" className="w-full hover-lift border-[#64A162] text-[#64A162] hover:bg-[#64A162] hover:text-white transition-all duration-300">
                         <Link href={`/blog/${post.slug}`}>Đọc tiếp</Link>
                       </Button>
                     </div>
