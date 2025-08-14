@@ -63,7 +63,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-2">
               <li className="flex items-start">
                 <MapPin className="mr-2 h-5 w-5 flex-shrink-0" />
-                <span className="text-sm">691 Hoàng Hoa Thám, Vĩnh Phúc, Ba Đình, Hà Nội</span>
+                <span className="text-sm">691 Hoàng Hoa Thám, Ba Đình, Hà Nội</span>
               </li>
               <li className="flex items-center">
                 <Phone className="mr-2 h-5 w-5" />

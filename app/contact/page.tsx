@@ -61,7 +61,7 @@ export default function ContactPage() {
                     <MapPin className="h-6 w-6 text-[#64A162]" />
                   </div>
                   <h3 className="mb-2 text-lg font-bold">Địa chỉ</h3>
-                  <p className="text-gray-600">691 Hoàng Hoa Thám, Vĩnh Phúc, Ba Đình, Hà Nội</p>
+                  <p className="text-gray-600">691 Hoàng Hoa Thám, Hà Nội</p>
                 </CardContent>
               </Card>
             </AnimationWrapper>
